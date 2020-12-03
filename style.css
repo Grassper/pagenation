@@ -23,12 +23,43 @@ body {
 /* overlay */
 .overlay{
   position: fixed;
-  z-index: 10;
+  z-index: 9;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
+  transform: translateX(-100vw);
+  -webkit-transform: translateX(-100vw);
+  -moz-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  -o-transform: translateX(-100vw);
+}
+
+.overlay-slide-right{
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.overlay-slide-left{
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transform: translateX(-100vw);
+  -webkit-transform: translateX(-100vw);
+  -moz-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  -o-transform: translateX(-100vw);
 }
 
 /* Nav menu items */
@@ -105,6 +136,94 @@ nav li a:hover{
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
+}
+
+/* Slide in animation with delay for each nav item */
+.slide-in-1{
+  animation: slide-in 0.4s linear 0.2s both;
+  -webkit-animation: slide-in 0.4s linear 0.2s both;
+}
+
+.slide-in-2{
+  animation: slide-in 0.4s linear 0.4s both;
+  -webkit-animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-3{
+  animation: slide-in 0.4s linear 0.6s both;
+  -webkit-animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slide-in-4{
+  animation: slide-in 0.4s linear 0.8s both;
+  -webkit-animation: slide-in 0.4s linear 0.8s both;
+}
+
+.slide-in-5{
+  animation: slide-in 0.4s linear 1s both;
+  -webkit-animation: slide-in 0.4s linear 1s both;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
+/* slide out animation with delay for each nav item */
+.slide-out-1{
+  animation: slide-out 0.3s linear 0.5s both;
+  -webkit-animation: slide-out 0.3s linear 0.5s both;
+}
+
+.slide-out-2{
+  animation: slide-out 0.3s linear 0.4s both;
+  -webkit-animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-3{
+  animation: slide-out 0.3s linear 0.3s both;
+  -webkit-animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slide-out-4{
+  animation: slide-out 0.3s linear 0.2s both;
+  -webkit-animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slide-out-5{
+  animation: slide-out 0.3s linear 0.1s both;
+  -webkit-animation: slide-out 0.3s linear 0.1s both;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+  to {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
 }
 
 /* --- Menu Bars ------------------------------------ */
